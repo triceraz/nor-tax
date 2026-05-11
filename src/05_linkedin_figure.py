@@ -70,15 +70,16 @@ def main() -> None:
         fontweight=500,
     )
 
-    # Headline
+    # Headline — percentage-based, computed from the data
+    loss_pct = int(round((en_pages - nb_pages) / en_pages * 100))
     ax.text(
         0.06, 0.88, "Norsk får",
         fontsize=34, color=COL_INK, fontweight=600,
         family="DejaVu Sans",
     )
     ax.text(
-        0.06, 0.82, "92 færre sider",
-        fontsize=44, color=COL_RED, fontweight=700,
+        0.06, 0.82, f"{loss_pct} % mindre",
+        fontsize=48, color=COL_RED, fontweight=700,
         family="DejaVu Sans",
     )
     ax.text(
@@ -103,7 +104,7 @@ def main() -> None:
 
     rows = [
         ("GPT-4o · engelsk",      en_pages,   COL_ACCENT, "baseline"),
-        ("GPT-4o · norsk",        nb_pages,   COL_RED,    f"-{int((en_pages - nb_pages) / en_pages * 100)} % effektivt vindu"),
+        ("GPT-4o · norsk",        nb_pages,   COL_RED,    f"-{loss_pct} % effektivt vindu"),
         ("NorMistral · norsk",    norm_pages, COL_GREEN,  "+18 % over engelsk"),
     ]
 
