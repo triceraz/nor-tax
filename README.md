@@ -1,4 +1,4 @@
-# DIA-TAX
+# NOR-TAX
 
 **The Norwegian Tokenization Tax: How BPE Penalizes Norwegian Speakers and What a Norwegian-Trained Tokenizer Recovers.**
 
