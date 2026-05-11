@@ -78,12 +78,12 @@ def main() -> None:
         family="DejaVu Sans",
     )
     ax.text(
-        0.06, 0.79, "på å være norsk",
+        0.06, 0.79, "på norsk innhold",
         fontsize=34, color=COL_INK, fontweight=600,
         family="DejaVu Sans",
     )
     ax.text(
-        0.06, 0.74, "i KI-en.",
+        0.06, 0.74, "i KI.",
         fontsize=34, color=COL_INK, fontweight=600,
         family="DejaVu Sans",
     )
