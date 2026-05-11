@@ -34,6 +34,8 @@ Det betyr for norske SMB-er som bruker engelsk-trente modeller via API:
 
 Det er ikke et argument mot å bruke API-modeller. Det er et argument for å vite hva det koster.
 
+Hos Tenki jobber vi med å bygge norsk-trente KI-modeller som hindrer at norske bedrifter må betale denne skatten i utgangspunktet.
+
 Råddata, kode og full reproducerbarhet på github.com/triceraz/dia-tax. v0.1 av et lite prosjekt jeg gjør under Tenki Labs.
 
 #norskKI #lokalKI #NLP #tokenisering
