@@ -70,20 +70,20 @@ def main() -> None:
         fontweight=500,
     )
 
-    # Headline — percentage-based, computed from the data
+    # Headline — the NOR-TAX framing
     loss_pct = int(round((en_pages - nb_pages) / en_pages * 100))
     ax.text(
-        0.06, 0.88, "Norsk får",
+        0.06, 0.86, f"{loss_pct} % skatt",
+        fontsize=54, color=COL_RED, fontweight=700,
+        family="DejaVu Sans",
+    )
+    ax.text(
+        0.06, 0.79, "på å være norsk",
         fontsize=34, color=COL_INK, fontweight=600,
         family="DejaVu Sans",
     )
     ax.text(
-        0.06, 0.82, f"{loss_pct} % mindre",
-        fontsize=48, color=COL_RED, fontweight=700,
-        family="DejaVu Sans",
-    )
-    ax.text(
-        0.06, 0.76, "i samme KI-vindu.",
+        0.06, 0.74, "i KI-en.",
         fontsize=34, color=COL_INK, fontweight=600,
         family="DejaVu Sans",
     )
