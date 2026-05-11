@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.venv/
+.venv312/
+.env
+.DS_Store
+*.log
+
+# Don't commit HF model caches; they're huge
+.cache/
+huggingface/
+
+# Keep tokenization output (small JSON) for reproducibility
+!runs/*.json
+!runs/*.jsonl
