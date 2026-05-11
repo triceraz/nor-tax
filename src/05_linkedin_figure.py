@@ -51,8 +51,8 @@ def main() -> None:
     nb_pages   = fit["gpt-4o::nb"]["windows"]["128K"]["pages_fit"]
     norm_pages = fit["normistral-7b::nb"]["windows"]["128K"]["pages_fit"]
 
-    # 4:5 aspect (LinkedIn-friendly mobile-first portrait)
-    fig = plt.figure(figsize=(8, 10), dpi=160)
+    # LinkedIn-friendly portrait, compact (no dead whitespace under bars)
+    fig = plt.figure(figsize=(8, 7.6), dpi=160)
     fig.patch.set_facecolor(COL_BG)
 
     ax = fig.add_axes([0, 0, 1, 1])
@@ -65,7 +65,7 @@ def main() -> None:
     # TOP — Eyebrow + headline
     # =========================================================
     ax.text(
-        0.06, 0.94, "NOR-TAX  ·  TOKENIZATION-SKATTEN",
+        0.06, 0.93, "NOR-TAX  ·  TOKENIZATION-SKATTEN",
         fontsize=12, color=COL_MUTED, family="monospace",
         fontweight=500,
     )
@@ -73,17 +73,17 @@ def main() -> None:
     # Headline — the NOR-TAX framing
     loss_pct = int(round((en_pages - nb_pages) / en_pages * 100))
     ax.text(
-        0.06, 0.86, f"{loss_pct} % skatt",
+        0.06, 0.83, f"{loss_pct} % skatt",
         fontsize=54, color=COL_RED, fontweight=700,
         family="DejaVu Sans",
     )
     ax.text(
-        0.06, 0.79, "på norsk innhold",
+        0.06, 0.74, "på norsk innhold",
         fontsize=34, color=COL_INK, fontweight=600,
         family="DejaVu Sans",
     )
     ax.text(
-        0.06, 0.74, "i KI.",
+        0.06, 0.67, "i KI.",
         fontsize=34, color=COL_INK, fontweight=600,
         family="DejaVu Sans",
     )
@@ -108,7 +108,7 @@ def main() -> None:
         ("NorMistral · norsk",    norm_pages, COL_GREEN,  "+18 % over engelsk"),
     ]
 
-    y0 = 0.62
+    y0 = 0.52
     gap = 0.13
     for i, (label, pages, color, sub) in enumerate(rows):
         y = y0 - i * gap
@@ -165,16 +165,16 @@ def main() -> None:
         )
 
     # =========================================================
-    # BOTTOM — Attribution
+    # BOTTOM — Attribution (just below the last bar, no dead space)
     # =========================================================
     ax.text(
-        0.06, 0.05,
+        0.06, 0.10,
         "Måling: 200 FLORES-200-setninger, parret BM/NB/EN-innhold",
         fontsize=10, color=COL_MUTED, fontweight=500,
         family="monospace",
     )
     ax.text(
-        0.06, 0.025,
+        0.06, 0.06,
         "github.com/triceraz/dia-tax  ·  Tenki Labs",
         fontsize=10, color=COL_MUTED, fontweight=500,
         family="monospace",
