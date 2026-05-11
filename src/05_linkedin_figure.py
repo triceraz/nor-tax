@@ -165,28 +165,6 @@ def main() -> None:
         )
 
     # =========================================================
-    # MIDDLE-BOTTOM — Explanation
-    # =========================================================
-    ax.text(
-        0.06, 0.20,
-        "Et 128K context-vindu = ~348 sider engelsk innhold.",
-        fontsize=13, color=COL_INK, fontweight=500,
-        family="DejaVu Sans",
-    )
-    ax.text(
-        0.06, 0.165,
-        "Samme vindu = bare 256 sider norsk på GPT-4o.",
-        fontsize=13, color=COL_INK, fontweight=500,
-        family="DejaVu Sans",
-    )
-    ax.text(
-        0.06, 0.13,
-        "En norsk-trent tokenizer (NorMistral) snur regnestykket.",
-        fontsize=13, color=COL_GREEN, fontweight=600,
-        family="DejaVu Sans",
-    )
-
-    # =========================================================
     # BOTTOM — Attribution
     # =========================================================
     ax.text(
