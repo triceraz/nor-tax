@@ -12,7 +12,7 @@ as the main visual.
 
 Samme spørsmål. Samme modell. Norsk koster 30 % mer enn engelsk.
 
-Vi målte tokenization-skatten på fire språkmodeller med 200 parallelle setninger fra FLORES-200. Resultatet:
+Vi målte tokenization-skatten på fire språkmodeller med 200 parallelle setninger fra FLORES-200 (standardisert datasett for maskinoversettelse). Resultatet:
 
 - GPT-4o: 348 sider engelsk i 128K-vinduet, 256 sider norsk. Minus 27 %.
 - GPT-4 (legacy): 347 sider engelsk, 222 sider norsk. Minus 36 %.
@@ -36,7 +36,7 @@ Det er ikke et argument mot å bruke API-modeller. Det er et argument for å vit
 
 Hos Tenki jobber vi med å bygge norsk-trente KI-modeller som hindrer at norske bedrifter må betale denne skatten i utgangspunktet.
 
-Råddata, kode og full reproducerbarhet på github.com/triceraz/dia-tax. v0.1 av et lite prosjekt jeg gjør under Tenki Labs.
+Råddata, kode og full reproducerbarhet på github.com/triceraz/nor-tax. v0.1 av et lite prosjekt jeg gjør under Tenki Labs.
 
 #norskKI #lokalKI #NLP #tokenisering
 
